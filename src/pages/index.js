@@ -1,21 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import ProfileImage from "../components/profileImage"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import "bootstrap/dist/css/bootstrap.min.css"
+
+const styles = {
+  container: {
+    height: "100vh",
+  }
+}
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="container d-flex" style={styles.container}>
+      <div className="col align-self-center">
+        <SEO title="Sandra Bayabos" />
+        <div className="row justify-content-center">
+          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+            <ProfileImage />
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <h1>Sandra Bayabos</h1>
+        </div>
+        <div className="row justify-content-center">
+          <p>Junior Web Developer in Malaysia</p>
+        </div>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
